@@ -1,0 +1,16 @@
+{
+    "exports": [
+        {
+            "name": "get all tunnelvars",
+            "filename": "geefTunnelvars.ftl",
+            "description": "template to extract tunnelvars from opentunnel exportfile."
+        }
+    ],
+    "tools": [
+        {
+            "name": "template_keywords.ftl",
+            "filename": "template_keywords.ftl",
+            "description": "template_keywords.ftl"
+        }
+    ]
+}
