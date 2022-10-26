@@ -1,0 +1,15 @@
+#get all tunnelcodes from xml and create json file using groovy script
+function://extractTunnels=groovy://groovy/otdoc_extractTunnels.groovy
+dotunnels=function://extractTunnels/otdoc_tunnels.json
+url_tunnels=file://otdoc_tunnels.json
+
+#template uses groovy to create DOM document
+function://getDom=groovy://groovy/getDom.groovy
+
+#CHANGE THIS when you have another opentunnel export filename
+exportfile=const://configuration.xml
+attachment://configuration=file://$exportfile
+
+#in the otdoc_options.json you can change the way the uml is generated
+url_options=file://otdoc_options.json
+

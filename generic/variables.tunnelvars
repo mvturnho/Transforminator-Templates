@@ -1,0 +1,7 @@
+#use ${DEBUG()} in your freemarker template to dump vars in your output
+#xpath always prefix with xpath:// never only //
+
+#definitions like xmlns:// and header://
+
+
+#Tunnelvars

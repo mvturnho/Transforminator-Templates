@@ -1,0 +1,3 @@
+"class","extension"
+"nl.jnc.gateway.message.ctrl.transform.FreeMarkerTransformer",".ftl"
+"nl.jnc.gateway.message.ctrl.transform.XsltTransformer",".xsl"

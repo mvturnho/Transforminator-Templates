@@ -1,16 +1,58 @@
 {
-    "exports": [
+    "opentunnel_exports": [
         {
             "name": "get all tunnelvars",
-            "filename": "geefTunnelvars.ftl",
-            "description": "template to extract tunnelvars from opentunnel exportfile."
+            "templatename": "ot_exports/tunnelvars.ftl",
+            "varfile": "ot_exports/tunnelvars.tunnelvars",
+            "description": "template to extract tunnelvars from opentunnel exportfile.",
+            "outputfilename": "tunnelvars.txt"
+        },
+        {
+            "name": "get transformations",
+            "templatename": "ot_exports/transformations.ftl",
+            "varfile": "ot_exports/transformations.tunnelvars",
+            "description": "extract transformations in plain text.",
+            "outputfilename": "transformations.txt",
+            "supportfiles": [
+                "ot_exports/extensions.csv"
+            ]
+        },
+        {
+            "name": "get mappings",
+            "templatename": "ot_exports/mappings.ftl",
+            "varfile": "ot_exports/mappings.tunnelvars",
+            "description": "extract mappings from export to csv.",
+            "outputfilename": "mappings.txt"
+        }
+    ],
+    "otdoc": [
+        {
+            "name": "otdoc export to plantuml",
+            "templatename": "otdoc/otdoc.ftl",
+            "varfile": "otdoc/otdoc.tunnelvars",
+            "description": "create plantuml from opentunnel export.",
+            "supportfiles": [
+                "groovy/getDom.groovy",
+                "groovy/otdoc_extractTunnels.groovy"
+            ],
+            "datafiles": [
+                "otdoc/otdoc_options.json",
+                "otdoc/README.txt"
+            ],
+            "outputfilename": "tunnels.puml"
         }
     ],
     "tools": [
         {
-            "name": "template_keywords.ftl",
-            "filename": "template_keywords.ftl",
-            "description": "template_keywords.ftl"
+            "name": "Generate keywords",
+            "templatename": "tools/template_keywords.ftl",
+            "varfile": "tools/keywords.tunnelvars",
+            "supportfiles": [
+                "data/map.csv",
+                "data/names.csv"
+            ],
+            "outputfilename": "output.xml",
+            "description": "Generate keywords from mapfiles"
         }
     ]
 }
