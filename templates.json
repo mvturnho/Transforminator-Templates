@@ -44,7 +44,7 @@
     ],
     "tools": [
         {
-            "name": "Generate keywords",
+            "name": "Generate java keywords",
             "templatename": "tools/template_keywords.ftl",
             "varfile": "tools/keywords.tunnelvars",
             "supportfiles": [
@@ -52,7 +52,17 @@
                 "data/names.csv"
             ],
             "outputfilename": "output.xml",
-            "description": "Generate keywords from mapfiles"
+            "description": "Generate java keywords from mapfiles"
+        },
+        {
+            "name": "csv to xslt mapping",
+            "templatename": "tools/xsltMapFromCsv.ftl",
+            "varfile": "tools/xsltMapFromCsv.tunnelvars",
+            "supportfiles": [
+                "data/map.csv"
+            ],
+            "outputfilename": "mapping.xsl",
+            "description": "Generate xslt mapping from csv mapping file"
         }
     ]
 }
