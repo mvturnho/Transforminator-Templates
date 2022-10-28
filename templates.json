@@ -57,12 +57,12 @@
         {
             "name": "csv to xslt mapping",
             "templatename": "tools/xsltMapFromCsv.ftl",
-            "varfile": "tools/xsltMapFromCsv.tunnelvars",
-            "supportfiles": [
-                "data/map.csv"
-            ],
+            "varfile": "generic/variables.tunnelvars",
             "outputfilename": "mapping.xsl",
-            "description": "Generate xslt mapping from csv mapping file"
+            "description": "Generate xslt mapping from csv mapping file",
+            "datafiles": [
+                "tools/README.txt"
+            ]
         }
     ]
 }
