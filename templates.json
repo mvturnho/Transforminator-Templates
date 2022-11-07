@@ -23,6 +23,16 @@
             "varfile": "ot_exports/mappings.tunnelvars",
             "description": "extract mappings from export to csv.",
             "outputfilename": "mappings.txt"
+        },
+        {
+            "name": "Extract tunnelvars transformations mappings",
+            "templatename": "ot_exports/extract_all.ftl",
+            "varfile": "ot_exports/extract_all.tunnelvars",
+            "description": "extract all from export.",
+            "outputfilename": "extract_all.txt",
+            "supportfiles": [
+                "ot_exports/extensions.csv"
+            ]
         }
     ],
     "otdoc": [
