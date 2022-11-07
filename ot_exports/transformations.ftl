@@ -13,5 +13,11 @@ Transformations strored in ${folder} folder in these files:
     <#assign res=tools.saveFile(filename,content)/>
 ${num} - ${transformer.name}
     ${filename}
+    Attributes:
+    <#list transformer["template-attributes"].* as attr>
+${attr.name}=${attr.value}
+    </#list>
     <#assign num+=1/>
+----------------------------------------------
+    
 </#list>
