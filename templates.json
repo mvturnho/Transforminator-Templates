@@ -33,6 +33,16 @@
             "supportfiles": [
                 "ot_exports/extensions.csv"
             ]
+        },
+        {
+            "name": "Describe tunnels from export",
+            "templatename": "ot_exports/tunnel_description.ftl",
+            "varfile": "ot_exports/extract_all.tunnelvars",
+            "description": "create a description from entrypoint to exitpoint.",
+            "outputfilename": "tunnel_description.txt",
+            "supportfiles": [
+                "ot_exports/extensions.csv"
+            ]
         }
     ],
     "otdoc": [

@@ -46,9 +46,11 @@ Transformations strored in ${transformation_folder} folder in these files:
     <#assign classname=transformer.classname/>
     <#--  decode base64  -->
     <#assign content=tools.b64Decode(transformer.content)/>
-    <#assign filename=transformation_folder + "/" + transformer.name?replace("/","_")?replace("\\","_") + extensions.map[classname]/>
+    <#assign filename=transformer.name?replace("/","_")?replace("\\","_")?replace(r'\W+','_','r') + extensions.map[classname]/>
+    <#assign full_filename=transformation_folder + "/" + filename/>
+    
     <#--  save to file  -->
-    <#assign res=tools.saveFile(filename,content)/>
+    <#assign res=tools.saveFile(full_filename,content)/>
 ${num} - ${transformer.name}
 ${filename}
 <#if (transformer["template-attributes"]?has_content)>

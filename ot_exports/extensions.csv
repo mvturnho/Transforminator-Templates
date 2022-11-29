@@ -1,3 +1,5 @@
 "class","extension"
+"default",".txt"
 "nl.jnc.gateway.message.ctrl.transform.FreeMarkerTransformer",".ftl"
 "nl.jnc.gateway.message.ctrl.transform.XsltTransformer",".xsl"
+"nl.jnc.gateway.message.ctrl.transform.GroovyTransformer",".groovy"
